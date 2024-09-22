@@ -9,11 +9,27 @@ body{
     background-position: 90% -24%;
 }
 
+.darkmodeImg{
+
+    background-image: url('../img/bg-dark-tablet-pattern.svg');
+    background-repeat:no-repeat;
+    background-size:800px;
+    background-position: 90% -24%;
+}
+
+
 #cta{
 
     background-image: url('../img/bg-simplify-section-desktop.svg');
     background-repeat:no-repeat;
 
+}
+
+/* Tailwind CSS for dark mode on md and lg screens */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-image: url('../img/bg-dark-tablet-pattern.svg');
+    }
 }
 
 @media(max-width:576px) {
