@@ -4,7 +4,7 @@ module.exports = {
   // purge: ["./src/**/*.{html,js}"],
   // darkMode: false, // or'media' or 'class',
   content: ["./**/*.{html,js}"],
-  
+  darkMode: 'class',
   theme: {
     screens: {
       sm: "480px",
