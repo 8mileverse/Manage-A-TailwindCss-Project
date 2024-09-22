@@ -2,6 +2,10 @@ const btn = document.querySelector('#menu-btn');
 const menu = document.querySelector('#menu');
 
 
+var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+
 btn.addEventListener('click', (onclick) => {
   btn.classList.toggle('open')
   menu.classList.toggle('flex')
@@ -15,9 +19,6 @@ btn.addEventListener('click', (onclick) => {
 } else {
     document.documentElement.classList.remove('dark')
 }
-
-var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
 // Change the icons inside the button based on previous settings
 if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -55,4 +56,14 @@ themeToggleBtn.addEventListener('click', function() {
         }
     }
     
+});
+
+
+const toggleButton = document.getElementById('toggle-dark-mode');
+const body = document.body;
+
+toggleButton.addEventListener('click', () => {
+    if (window.matchMedia('(min-width: 768px)').matches) { // Check if on md or larger
+        body.classList.toggle('darkmodeImg');
+    }
 });
